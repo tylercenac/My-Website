@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 function Navigation(props) {
   return (
     <div className="navigation">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
           <Link class="navbar-brand" to="/">
             React Multi-Page Website

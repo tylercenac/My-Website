@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from "react";
 import axios from 'axios';
+import BlogPost from './BlogPost'
 
 
 let uri = 'http://localhost:3001/';
@@ -22,16 +23,15 @@ function Blog() {
   return (
     <div className="blog">
     {blogList.map((post) => {
-      let date =  new Date(post.posted_at);
-      return(
-        <>
+      return( <BlogPost post={post}/>
+        /*<>
         <div class="container border rounded my-4">
           <h1 align="center"><b>{post.title}</b></h1>
           <h5 align="center">Author: {post.author}</h5>
           <h5 align="center">Date: {date.getMonth()+1 + '-' + date.getDate() +'-' + date.getFullYear()}</h5>
           <p>{post.description}</p>
-        </div>
-        </>
+      </div>
+        </>*/
       )
     })}
     </div>
